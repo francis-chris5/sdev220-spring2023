@@ -18,8 +18,13 @@ with  open("workforce.csv", "r") as fromFile:
         if len(row) != 0:
             tmep = Employee(row[0], row[1], row[2], row[3], row[4], row[5])
             boss.push(boss, tmep)
+            ## boss.display(boss) ## echo to make sure stack forms correctly
+    boss.getHours("hours.csv")
             
             
-while boss != None:
+while boss.next != None:
     print(boss.pop(boss))
+    ## print("\n**********************************\n") ## split things up when lots of echoes for each employee
+    ## print("*****************")
+    ## boss.display(boss)
     

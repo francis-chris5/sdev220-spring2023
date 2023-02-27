@@ -1,0 +1,26 @@
+
+
+1.) copied over the display method from list we made monday
+        * called that while reading the data file, and when processing payroll
+        * the stack checks out pushing and popping
+        
+2.) noticed input in pop method had self.name, changed to top.name
+
+3.) added an echo to make sure pay() was getting called with correct object from stack
+        * it was, added in hours, correct value
+        * added echoes at every step in pay() method
+        ** values are there but it is returning none
+        
+        
+    
+*** new issues, still get none for all returns except sally (first in stack) then an attribute error on boss.next.next
+        ** made while loop while boss.next != none
+        ********** FIXED
+        
+4.) back to final none-type return, suddenly noticed there was not a return on the else structure
+    ** this means that top of stack returns but it came from recursive call so all previous calls were returning none
+    ** this explains why the last value worked
+    *** removed echoes to finish up.
+    *******************  FIXED
+
+** added in the empID field we forgot in the output
